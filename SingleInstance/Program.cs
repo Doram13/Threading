@@ -23,8 +23,10 @@ namespace SingleInstance
                 }
                 catch (WaitHandleCannotBeOpenedException)
                 {
-
                     MyMutex = Mutex.OpenExisting(MutexName);
+
+                    //System.Threading.WaitHandleCannotBeOpenedException
+                    //  Message = No handle of the given name exists.
                 }
             }
         }
